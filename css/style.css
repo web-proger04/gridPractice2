@@ -1,0 +1,293 @@
+@font-face {
+	font-family: 'Sofia Pro';
+	src: url('../fonts/SofiaProBold.eot');
+	src: local('☺'), url('../fonts/SofiaProBold.woff') format('woff'), url('../fonts/SofiaProBold.ttf') format('truetype'), url('../fonts/SofiaProBold.svg') format('svg');
+	font-weight: 700;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Sofia Pro';
+	src: url('../fonts/SofiaProMedium.eot');
+	src: local('☺'), url('../fonts/SofiaProMedium.woff') format('woff'), url('../fonts/SofiaProMedium.ttf') format('truetype'), url('../fonts/SofiaProMedium.svg') format('svg');
+	font-weight: 500;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Circular Std';
+	src: url('../fonts/CircularStd-Medium.eot');
+	src: local('☺'), url('../fonts/CircularStd-Medium.woff') format('woff'), url('../fonts/CircularStd-Medium.ttf') format('truetype'), url('../fonts/CircularStd-Medium.svg') format('svg');
+	font-weight: 500;
+	font-style: normal;
+}
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   border: none;
+   outline: none;
+   text-decoration: none;
+   list-style: none;
+}
+html {
+   scroll-behavior: smooth;
+}
+body {
+   background-color: #FAFAFA;
+   font-family: 'Sofia Pro';
+   padding: 50px 0;
+}
+:root {
+   --blue: #001AA2;
+   --red: #FD2E24;
+   --black: #000;
+}
+.container {
+   max-width: 1140px;
+   margin: 0 auto;
+   padding: 0 20px;
+}
+
+/* grid-wrapper */
+.grid-wrapper {
+}
+.grid-wrapper__container {
+}
+.grid-wrapper__row {
+   display: grid;
+   justify-content: center;
+   grid-template: repeat(4, 180px) / repeat(4, 259px);
+   grid-gap: 20px;
+   grid-template-areas: 
+      "sale sale model1 model2"
+      "summer summer model1 model2"
+      "model3 model4 trending trending"
+      "model3 model4 first-time first-time";
+}
+.grid-wrapper__sale:hover, .grid-wrapper__summer, .grid-wrapper__model, .grid-wrapper__trending, .grid-wrapper__first-time {
+   transition: transform 350ms ease;
+}
+.grid-wrapper__sale:hover, .grid-wrapper__summer:hover, .grid-wrapper__model:hover, .grid-wrapper__trending:hover, .grid-wrapper__first-time:hover {
+   transform: translateY(-8px);
+}
+.grid-wrapper__sale {
+}
+.sale {
+   grid-area: sale;
+   position: relative;
+}
+.sale__item {
+
+}
+.sale__image {
+   display: block;
+   width: 100%;
+   max-width: 539px;
+   height: 100%;
+   object-fit: cover;
+   border-radius: 15px;
+}
+.sale__subject {
+   font-family: 'Sofia Pro';
+   font-style: normal;
+   font-weight: 700;
+   font-size: 30px;
+   line-height: 30px;
+   color: var(--black);
+   position: absolute;
+   top: 75px;
+   left: 133px;
+   text-align: center;
+}
+.grid-wrapper__summer {
+}
+.summer {
+   grid-area: summer;
+}
+.summer__item {
+
+}
+.summer__image {
+   display: block;
+   width: 100%;
+   max-width: 539px;
+   height: 100%;
+   object-fit: cover;
+   border-radius: 15px;
+}
+.grid-wrapper__model {
+}
+.model {
+   position: relative;
+}
+.model__item {
+   display: block;
+}
+.model_1 {
+   grid-area: model1;
+}
+.model__image {
+   display: block;
+   width: 100%;
+   max-width: 259px;
+   height: 380px;
+   object-fit: cover;
+   border-radius: 15px;
+}
+.model__like {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   position: absolute;
+   top: 20px;
+   right: 20px;
+   width: 38px;
+   height: 38px;
+   border-radius: 50%;
+   background-color: #fff;
+}
+.model__heart {
+   cursor: pointer;
+}
+.model_2 {
+   grid-area: model2;
+}
+.model_3 {
+   grid-area: model3;
+}
+.model_4 {
+   grid-area: model4;
+}
+.grid-wrapper__trending {
+}
+.trending {
+   grid-area: trending;
+   position: relative;
+}
+.trending__item {
+   display: block;
+}
+.trending__image {
+   display: block;
+   border-radius: 15px;
+   width: 100%;
+   max-width: 539px;
+   height: 100%;
+   object-fit: cover;
+}
+.trending__info-block {
+   position: absolute;
+   bottom: 53px;
+   left: 30px;
+}
+.info-block {
+}
+.info-block__title {
+   font-family: 'Sofia Pro';
+   font-style: normal;
+   font-weight: 700;
+   font-size: 26px;
+   line-height: 26px;
+   margin: 0 0 10px 0;
+}
+.info-block__title_blue {
+   color: var(--blue);
+}
+.info-block__text {
+   font-family: 'Sofia Pro';
+   font-style: normal;
+   font-weight: 400;
+   font-size: 15px;
+   line-height: 15px;
+   color: var(--black);
+}
+.first-time {
+   grid-area: first-time;
+   position: relative;
+}
+.first-time__item {
+   /* display: block; */
+}
+.first-time__image {
+   display: block;
+   border-radius: 15px;
+   width: 100%;
+   max-width: 539px;
+   height: 100%;
+   object-fit: cover;
+}
+.first-time__info-block {
+   position: absolute;
+   bottom: 53px;
+   left: 30px;
+}
+.info-block__title_red {
+   color: var(--red);
+}
+/* grid-wrapper */
+
+@media all and (max-width: 1145px) {
+   .grid-wrapper__row {
+      grid-template: repeat(8, 180px) / repeat(2, 259px);
+      grid-template-areas:
+        "sale sale"
+        "summer summer"
+        "model1 model2"
+        "model1 model2"
+        "model3 model4"
+        "model3 model4"
+        "trending trending"
+        "first-time first-time";
+   }
+   .grid-wrapper__sale:hover, .grid-wrapper__summer:hover, .grid-wrapper__model:hover, .grid-wrapper__trending:hover, .grid-wrapper__first-time:hover {
+      transform: scale(1.02);
+   }
+}
+
+@media all and (max-width: 768px) {
+   .sale {
+      position: static;
+   }
+   .sale__item {
+      position: relative;
+   }
+   .sale__subject {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+   }
+}
+
+@media all and (max-width: 576px) {
+   .grid-wrapper__row {
+      grid-template: repeat(8, auto) / repeat(2, auto);
+      grid-template-areas:
+        "sale sale"
+        "summer summer"
+        "model1 model2"
+        "model1 model2"
+        "model3 model4"
+        "model3 model4"
+        "trending trending"
+        "first-time first-time";
+   }
+   .sale__subject, .info-block__title {
+      font-size: 19px;
+      line-height: 20px;
+   }
+   .trending__image {
+      margin: 0 0 10px 0;
+   }
+   .info-block__text {
+      font-size: 16px;
+   }
+   .first-time__info-block, .trending__info-block {
+      position: static;
+   }
+}
+
+@media all and (max-width: 440px) {
+   .sale__subject {
+      font-size: 17px;
+   }
+}
